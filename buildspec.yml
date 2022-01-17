@@ -9,7 +9,7 @@ phases:
     commands:
       - rbenv install 2.7.4 && rbenv global 2.7.4
       - bundle install
-      - bundle exec rake webpacker:yarn_install
+      # - bundle exec rake webpacker:yarn_install
   build:
     commands:
       - echo Build Start
