@@ -1,0 +1,16 @@
+current directory: /Users/naomi.doi/Projects/sample-app/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+/Users/naomi.doi/.rbenv/versions/2.7.4/bin/ruby -I /Users/naomi.doi/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20220117-7484-kajie3.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/naomi.doi/Projects/sample-app/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR=" clean
+
+current directory: /Users/naomi.doi/Projects/sample-app/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR="
+compiling strscan.c
+linking shared-object strscan.bundle
+
+current directory: /Users/naomi.doi/Projects/sample-app/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 strscan.bundle ./.gem.20220117-7484-1lguojf
