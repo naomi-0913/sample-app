@@ -1,20 +1,20 @@
-version: 0.1
+version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      ruby: 2.7
+      nodejs: 10
+  pre_build:
     commands:
-      - echo install started on `date`
-      - sudo apt-get update
-      - sudo apt-get -y install nodejs
-      - sudo apt-get -y install npm
-      - sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
-      - gem install bundler
+      - rbenv install 2.7.4 && rbenv global 2.7.4
       - bundle install
+      - bundle exec rake webpacker:yarn_install
   build:
     commands:
-      - echo Build started on `date`
-      # - bundle exec rails test
+      - echo Build Start
+      # - bundle exec rake assets:precompile RAILS_ENV=production
       - bundle exec rspec ./spec/system/post_spec.rb
-  post_build:
-    commands:
-      - echo Build completed on `date`
+artifacts:
+  files:
+    - ./**/*
